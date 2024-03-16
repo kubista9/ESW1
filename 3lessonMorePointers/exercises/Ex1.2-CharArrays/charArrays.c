@@ -5,8 +5,8 @@ int main(){
     char str[] = "Hello";
     int length = strlen(str);
 
-    for(int i = 0; i <length; i++){
-        
+    for(int i = length - 1; i >= 0; i--){
+        printf("%c",str[i]);
     }
 
     return 0;
