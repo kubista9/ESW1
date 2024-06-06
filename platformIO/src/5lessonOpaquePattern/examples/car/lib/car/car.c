@@ -2,15 +2,14 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
-
 struct car_s{
     char  brand[30];
     char  model[30]; 
     int horse_power;
     double fuel_capacity;
     double current_fuel;
-    double fuel_efficientcy;
-};
+    double fuel_efficientcy;};
+
 
 car_t car_create(const char * brand,const char * model, int horse_power, double fuel_capacity, double current_fuel, double fuel_efficientcy){
     car_t car = malloc(sizeof(struct car_s));

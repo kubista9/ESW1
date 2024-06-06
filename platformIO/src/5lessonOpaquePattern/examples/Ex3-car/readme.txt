@@ -1,1 +1,0 @@
-this project was done with Platform.io. If you want to get rid of the error you have to initialize it through platform.io
