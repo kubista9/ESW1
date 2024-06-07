@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../../../.."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"rectangle.h": "c",
+			"__locale": "c"
+		}
+	}
+}
