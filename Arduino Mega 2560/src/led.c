@@ -1,20 +1,25 @@
 #include "led.h"
 #include <avr/io.h>
+#include <util/delay.h>
 
-#define DDR_LED DDRB
-#define PORT_LED PORTB
-
-void led_init(){
-    DDR_LED|=(1<<PB7);
+void Led_init() {
+    // Set PB7 as output for the test LED
+    DDRB |= (1 << PB7);
 }
 
+void Led_turnOn() {
+    PORTB |= (1 << PB7);
+}
 
-void led_on(){
-    PORT_LED|=(1<<PB7);
+void Led_turnOff() {
+    PORTB &= ~(1 << PB7);
 }
-void led_off(){
-    PORT_LED&=~(1<<PB7);
-}
-void led_toggle(){
-    PORT_LED^=(1<<PB7);
+
+void Led_blink(int times) {
+    for (int i = 0; i < times; i++) {
+        Led_turnOn();
+        _delay_ms(500);
+        Led_turnOff();
+        _delay_ms(500);
+    }
 }
