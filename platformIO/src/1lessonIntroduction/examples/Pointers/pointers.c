@@ -18,6 +18,8 @@ int main(){
     printf("&b: %p\n", &b); // %p is the format specifier for pointers
     // -> &b: 0x16d4a7178
     printf("a: %p\n", a); 
+
+    printf("|--------------------------------|\n");
     // -> a: 0x16d4a7178
 
     *a  = 50;
