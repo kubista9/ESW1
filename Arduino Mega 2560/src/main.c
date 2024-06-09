@@ -1,15 +1,10 @@
-#include <avr/io.h>
-#include <util/delay.h>
-#include "led.h"
+#include "uart.h"
 
-int main(void) {
-    led_init();
-    
+int main() {
+    uartInit(9600);
+
     while (1) {
-        led_on();
-        _delay_ms(500);
-        led_off();
-        _delay_ms(500);
+        // Main loop does nothing, all work is done in ISR
     }
 
     return 0;
