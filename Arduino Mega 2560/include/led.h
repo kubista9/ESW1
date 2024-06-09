@@ -1,6 +1,8 @@
 #pragma once
 
-void led_init();
-void led_on();
-void led_off();
-void led_toggle();
+#include <stdint.h>
+
+void Led_init();
+void Led_turnOn(uint8_t led_No);
+void Led_turnOff(uint8_t led_No);
+void Led_toggle(uint8_t led_No);
