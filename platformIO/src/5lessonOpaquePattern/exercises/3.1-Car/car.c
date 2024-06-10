@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
+
 struct car_s{
     char  brand[30];
     char  model[30]; 
