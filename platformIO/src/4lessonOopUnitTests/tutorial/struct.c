@@ -18,8 +18,7 @@ typedef struct{
     int *array;
 } Data;
 
-void
-print_student(Student student)
+void print_student(Student student)
 {
     printf("Name: %s\n", student.name);
     printf("ID: %s\n", student.id);
@@ -58,7 +57,7 @@ int main() {
     printf("P1.x %d\n", p1.x);
     printf("P1.y %d\n", p1.y);
 
-    printf("Pľ.x %d\n", p2.x);
+    printf("P2.x %d\n", p2.x);
     printf("P2.y %d\n", p2.y);
 
     Point points[10];
