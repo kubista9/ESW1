@@ -1,14 +1,8 @@
 #include <stdio.h>
 #include "rectangle.h"
 
-typedef enum {
-    SUCCESS          = 0,
-    INVALID_ARGUMENT = 1,
-    // Add other error codes as needed
-} rectangle_error_t;
-
-
-// -> is used for accessing members ( variables, methods )of a structure or a class through pointer
+// -> is used for accessing members ( variables, methods )of a structure or 
+// a class through pointer
 rectangle_error_t rectangle_create(rectangle_t *rectangle, int width, int height) {
     if (width < 0 || height < 0) {
         return INVALID_ARGUMENT;
@@ -20,13 +14,14 @@ rectangle_error_t rectangle_create(rectangle_t *rectangle, int width, int height
     return SUCCESS;
 }
 
-// By declaring the pointer parameter as const, you are indicating that the function will not modify the rectangle_t
+// By declaring the pointer parameter as const, you are indicating 
+// that the function will not modify the rectangle_t
 
-int square_get_height(const rectangle_t *rectangle){
+int rectangle_get_height(const rectangle_t *rectangle){
     return rectangle -> height;
 }
 
-int square_get_width(const rectangle_t *rectangle){
+int rectangle_get_width(const rectangle_t *rectangle){
     return rectangle -> width;
 }
 
@@ -46,10 +41,10 @@ rectangle_error_t setHeight(rectangle_t *rectangle, int height) {
     return SUCCESS;
 }
 
-int square_get_area(const rectangle_t *rectangle){
+int rectangle_get_area(const rectangle_t *rectangle){
     return rectangle -> area;
 }
 
-int square_get_perimeter(const rectangle_t *rectangle){
+int rectangle_get_perimeter(const rectangle_t *rectangle){
     return rectangle -> perimeter;
 }
