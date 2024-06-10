@@ -2,14 +2,13 @@
 #include "rectangle.h"
 
 int main() {
-    rectangle_t myRectangle;
-    rectangle_create(&myRectangle, 5, 3);
 
-    printf("The length of my rectangle is %d\n", rectangle_get_height(&myRectangle));
-    printf("The widthh of my rectangle is %d\n", rectangle_get_width(&myRectangle));
-    printf("The area of my rectangle is %d\n", rectangle_get_area(&myRectangle));
-    printf("The perimeter of my rectangle is %d\n", rectangle_get_perimeter(&myRectangle));
+    // Using rectangle
+    rectangle_t my_rectangle = rectangle_create(5, 10);
+    printf("Rectangle Width: %d\n", rectangle_get_width(my_rectangle));
+    printf("Rectangle Height: %d\n", rectangle_get_height(my_rectangle));
+    printf("Rectangle Area: %d\n", rectangle_get_area(my_rectangle));
+    printf("Rectangle Perimeter: %d\n", rectangle_get_perimeter(my_rectangle));
 
     return 0;
 }
-

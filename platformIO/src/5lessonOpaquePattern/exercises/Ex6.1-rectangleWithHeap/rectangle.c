@@ -1,53 +1,24 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "rectangle.h"
 
-// -> is used for accessing members ( variables, methods )of a structure or a class through pointer
-rectangle_error_t rectangle_create(rectangle_t **rectangle, int width, int height) {
-    if (width < 0 || height < 0) {
-        return INVALID_ARGUMENT;
-    }
-    *rectangle = malloc(sizeof(rectangle_t));
-    if (*rectangle == NULL) {
-        return INVALID_ARGUMENT; // Memory allocation failed
-    }
-    (*rectangle)->width = width;
-    (*rectangle)->height = height;
-    (*rectangle)->area = width * height;
-    (*rectangle)->perimeter = 2 * (width + height);
-    return SUCCESS;
+rectangle_t rectangle_create(int width, int height) {
+    rectangle_t rectangle;
+    rectangle.width = width;
+    rectangle.height = height;
+    return rectangle;
 }
 
-// By declaring the pointer parameter as const, you are indicating that the function will not modify the rectangle_t
-
-int square_get_height(const rectangle_t *rectangle){
-    return rectangle -> height;
+int rectangle_get_width(rectangle_t rectangle) {
+    return rectangle.width;
 }
 
-int square_get_width(const rectangle_t *rectangle){
-    return rectangle -> width;
+int rectangle_get_height(rectangle_t rectangle) {
+    return rectangle.height;
 }
 
-rectangle_error_t setWidth(rectangle_t *rectangle, int width) {
-    if (width < 0) {
-        return INVALID_ARGUMENT;
-    }
-    rectangle->width = width;
-    return SUCCESS;
+int rectangle_get_area(rectangle_t rectangle) {
+    return rectangle.width * rectangle.height;
 }
 
-rectangle_error_t setHeight(rectangle_t *rectangle, int height) {
-    if (height < 0) {
-        return INVALID_ARGUMENT;
-    }
-    rectangle->height = height;
-    return SUCCESS;
-}
-
-int square_get_area(const rectangle_t *rectangle){
-    return rectangle -> area;
-}
-
-int square_get_perimeter(const rectangle_t *rectangle){
-    return rectangle -> perimeter;
+int rectangle_get_perimeter(rectangle_t rectangle) {
+    return 2 * (rectangle.width + rectangle.height);
 }
