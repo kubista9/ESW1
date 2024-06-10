@@ -24,7 +24,7 @@ bool student_isAdult(student_t student){
 void student_print(student_t student){
     printf("The student, %s, is an ", student.name);
 
-    if (isAdult(student))
+    if (student_isAdult(student))
         printf("adult");
     else
         printf("youngster");
