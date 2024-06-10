@@ -3,23 +3,20 @@
 
 int main(){
 
-    int *a = calloc(10, sizeof(int)); //dynamically allocated array (calloc initializes the memory to 0
-
+    //dynamically allocated array of size 10
+    int *a = calloc(10, sizeof(int)); 
     for (int i = 0; i < 10; i++){
         a[i] = 10 - i;
     }
-
     for (int i = 0; i < 10; i++){
        printf("a[%d] = %d\n", i, a[i]);
     }
-    printf("\n");
 
-    printf("a: %p\n", a);
-
-    int *save = a;
+    printf("\na: %p\n", a);
+    int *save = a; // Save the pointer to check its value after freeing
     free(a); //free the memory
+    printf("save: %p\n\n",a);
 
-printf("save: %p\n",a);
     for (int i = 0; i < 10; i++){
         printf("save[%d] = %d\n", i , save[i]);
     }
