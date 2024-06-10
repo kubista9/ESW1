@@ -1,3 +1,5 @@
+#include "temp_converter.h"
+
 float temp_converter_toFahrenheit(float celsius){ 
     return (celsius * 9/5) + 32;
 }
