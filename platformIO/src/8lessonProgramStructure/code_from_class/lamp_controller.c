@@ -3,7 +3,6 @@
 #include <stdint.h>
 #include "periodic_task.h"
 
-
 void lamp_controller(){
     static uint8_t button_was_pressed=0;
 
@@ -14,7 +13,6 @@ void lamp_controller(){
     }
     if (!button_pressed())
         button_was_pressed=0;
-    
 }
 
 void lamp_controller_init(){

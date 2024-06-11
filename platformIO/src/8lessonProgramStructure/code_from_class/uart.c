@@ -12,8 +12,6 @@ void uart_init(uint16_t baudrate){
 
 }
 void uart_send(char * str){
-
-
     uint16_t i = 0;
 
     while (str[i])

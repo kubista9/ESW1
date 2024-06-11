@@ -1,4 +1,5 @@
 #include <avr/io.h>
+
 void led_init(){
     DDRB|=(1<<PB7);
 }

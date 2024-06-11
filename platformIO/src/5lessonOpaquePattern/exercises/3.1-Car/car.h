@@ -1,6 +1,7 @@
 typedef struct car_s * car_t;
 
-car_t car_create(const char * brand,const char * model, int horse_power, double fuel_capacity, double current_fuel, double fuel_efficientcy);
+car_t car_create(const char * brand,const char * model, int horse_power, 
+double fuel_capacity, double current_fuel, double fuel_efficientcy);
 char * car_get_brand(car_t self);
 char * car_get_model(car_t self);
 int car_get_horsepower(car_t self);

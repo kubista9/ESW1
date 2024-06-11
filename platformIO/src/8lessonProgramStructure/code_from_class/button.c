@@ -1,5 +1,6 @@
 #include <avr/io.h>
 #include <stdint.h>
+
 void button_init(){
     DDRB &=~(1<<PB4);
     PORTB |=(1<<PB4);
