@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include "square.h"
 
-// -> is used for accessing members ( variables, methods )of a structure or a class through pointer
+// -> is used for accessing members ( variables, methods )
+// of a structure or a class through pointer
 square_t square_create(int side) {
     square_t square;
     square.side = side;
