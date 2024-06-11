@@ -11,8 +11,10 @@
 #define BUTTON4_PIN PA7
 
 void button_init() {
-    DDR_BUTTON &= ~((1 << BUTTON1_PIN) | (1 << BUTTON2_PIN) | (1 << BUTTON3_PIN) | (1 << BUTTON4_PIN));  // Set all button pins as input
-    PORT_BUTTON |= (1 << BUTTON1_PIN) | (1 << BUTTON2_PIN) | (1 << BUTTON3_PIN) | (1 << BUTTON4_PIN);  // Enable pull-up resistors on all button pins
+    // Set all button pins as input
+    DDR_BUTTON &= ~((1 << BUTTON1_PIN) | (1 << BUTTON2_PIN) | (1 << BUTTON3_PIN) | (1 << BUTTON4_PIN));  
+     // Enable pull-up resistors on all button pins
+    PORT_BUTTON |= (1 << BUTTON1_PIN) | (1 << BUTTON2_PIN) | (1 << BUTTON3_PIN) | (1 << BUTTON4_PIN); 
 }
 
 bool button_pressed(uint8_t button_No) {
